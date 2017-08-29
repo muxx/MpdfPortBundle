@@ -20,7 +20,7 @@ class MpdfService {
 	        $allConstructorArgs = array_merge(array('utf-8', 'A4'), $allConstructorArgs);
 	    }		
 
-        $reflection = new \ReflectionClass('\mPDF');
+        $reflection = new \ReflectionClass('\Mpdf\Mpdf');
         $mpdf = $reflection->newInstanceArgs($allConstructorArgs);
 
         return $mpdf;
