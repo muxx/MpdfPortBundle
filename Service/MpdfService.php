@@ -50,7 +50,7 @@ class MpdfService {
         extract($options);
 
         if (null == $mpdf) {
-            $mpdf = $this->getMpdf($constructorArgs);
+            $mpdf = $this->getMpdf(array($constructorArgs));
         }
 
         //Add arguments to AddHtml function
