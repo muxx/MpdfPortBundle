@@ -21,7 +21,7 @@ class MpdfService {
 	    }		
 
         $reflection = new \ReflectionClass('\Mpdf\Mpdf');
-        $mpdf = $reflection->newInstanceArgs($allConstructorArgs);
+        $mpdf = $reflection->newInstanceArgs(array($allConstructorArgs));
 
         return $mpdf;
     }	     
@@ -50,7 +50,7 @@ class MpdfService {
         extract($options);
 
         if (null == $mpdf) {
-            $mpdf = $this->getMpdf(array($constructorArgs));
+            $mpdf = $this->getMpdf($constructorArgs);
         }
 
         //Add arguments to AddHtml function
